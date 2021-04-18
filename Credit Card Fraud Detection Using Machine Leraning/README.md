@@ -34,4 +34,4 @@ Some issues with traditional fraud detection system:
 * [Artificial Neural Network](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html)
 * [Credit Card Fraud Statistics](https://shiftprocessing.com/credit-card-fraud-statistics/)
 
-[Go Back](https://saurabhbiswas1985.github.io/Data-Science/)
+[Go Back](https://saurabhbiswas1985.github.io/)
