@@ -35,4 +35,4 @@ My aim is to develop a **classification model** that will identify breast cancer
 * W.H. Wolberg, W.N. Street, D.M. Heisey, and O.L. Mangasarian. Computer-derived nuclear features distinguish malignant from benign breast cytology. Human Pathology, 26:792--796, 1995.
 * Xiong, X., Kim, Y., Baek, Y., Rhee, D. W., & Kim, S. H. (2005, May). Analysis of breast cancer using data mining & statistical techniques. In Sixth International Conference on Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing and First ACIS International Workshop on Self-Assembling Wireless Network (pp. 82-87).
 
-[Go Back](https://saurabhbiswas1985.github.io/Data-Science/)
+[Go Back](https://saurabhbiswas1985.github.io/)
