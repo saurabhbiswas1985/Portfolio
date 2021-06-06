@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>About Me</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="generic.html">Stroke Prediction by Machine Learning</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3>Stroke Prediction by Machine Learning<br />
+									</h3>
+									<a href="images/stroke.jpeg" class="image fit"><img src="images/stroke.jpeg" alt="stroke" /></a>
+									<h5><a href="https://github.com/saurabhbiswas1985/saurabhbiswas1985.github.io/tree/main/Stroke%20Prediction%20by%20Machine%20Learning">View code on github<br />
+										</a></h5> <header>
+										<p> </p>
+<h3>Introduction</h3>
+<p>Stroke is the one of the leading causes of death according to the World Health Organization (WHO) and CDC data. According to WHO, almost 11% of total deaths are caused by stroke. CDC data suggests that, in United States, someone has a stroke in every 40sec, and one person dies in every 4 minutes because of stroke. From these statistics, we can understand stroke is a major health issue around the world.</p>
+
+<p>Machine Learning can examine patient’s data, draw a pattern and identify major attributes that can end up causing stroke. This project will build and compare Logistic Regression, Random Forest and Artificial Neural Network in terms of f1-score, precision-recall, accuracy.<p>
+									
+<p>The aim of this project is to build an effective model to detect high risk patients who have more chances of having stroke. They can take proper precaution and address the concerns and avoid this dangerous health problem. I believe early detection of high-risk people will give them the opportunity to fix their lifestyle and take control of the important attributes that can end up causing stroke.</p>					
+
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+<h3>Data Used</h3>
+<p>This project will use healthcare domain data. Specifically, it will use historical patients details who had stroke and some patients who didn’t have stroke. </p>
+<p>A stroke occurs when the blood supply to part of your brain is interrupted or reduced, preventing brain tissue from getting oxygen and nutrients. Brain cells begin to die in minutes. A stroke is a medical emergency, and prompt treatment is crucial.</p>
+
+											<ul class="alt">	
+												<li>Dataset: <a href="https://www.kaggle.com/fedesoriano/stroke-prediction-dataset">Stroke Prediction Dataset<br /></a></li>
+												<li>Highly <b>imbalanced</b> Dataset. Out of 5110 total patients only 249 patients had stroke i.e. it represents only 4.87% of the entire dataset.</li>
+												
+</li>
+											</ul>
+											
+<h3>Technology Used</h3>
+
+											<ul class="alt">
+												<li>Python3</li>
+												<li>Jupyter Notebook on Anaconda
+</li>
+											</ul>
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+<h3>Proposal</h3>
+<p>Stroke is the leading cause of death for Americans as per CDC data. It varies with race and ethnicity. Risk of having a stroke is twice for blacks as compared to whites. </p>
+<p>There are some factors that can increases the chance of getting a stroke. Finding correlation among these factors and stroke manually is very difficult and requires expertise in medical field. </p>
+<p>Machine Learning can help in this situation. Machine Learning can be used to analyse different stroke risk factor and detect a pattern between stroke and some of the risk factor. There are various classification models such as Logistic Regression, Random Forest etc. can be used to predict whether a patient will have stroke in future or not. Existing patient’s data can be used to train these models and then use the trained models to predict stroke using patient’s risk factors. It can help patients to control the factors that have greater influence in stroke. Also, high risk patient group can take proper precautions and measures so that they don’t have this life-threatening disease in future. </p>
+
+
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+
+
+
+<h3>Data</h3>
+<p>I’m using healthcare-dataset-stroke-data.csv from Kaggle. This dataset contains 5110 observation. It contains 11 input attributes and 1 output attribute that confirms whether the patient had stroke or not (1 – stroke, 0 – no stroke). Among these 11 input attributes, ‘id’ column identifies the patient uniquely and this doesn’t provide any value in predicting stroke. Other attributes may have some impact on stroke. These attributes are: </p>
+
+<ul class="alt">
+												<li>1.	gender: "Male", "Female" or "Other"</li>
+												<li>2.	age: age of the patient</li>
+												<li>3.	hypertension: 0 if the patient doesn't have hypertension, 1 if the patient has hypertension</li>
+												<li>4.	heart_disease: 0 if the patient doesn't have any heart diseases, 1 if the patient has a heart disease</li>
+												<li>5.	ever_married: "No" or "Yes"</li>
+												<li>6.	work_type: "children", "Govt_jov", "Never_worked", "Private" or "Self-employed"</li>
+												<li>7.	Residence_type: "Rural" or "Urban"</li>
+												<li>8.	avg_glucose_level: average glucose level in blood</li>
+												<li>9.	bmi: body mass index</li>
+												<li>10.	smoking_status: "formerly smoked", "never smoked", "smokes" or "Unknown"*</li>
+
+												
+											</ul>
+
+<a href="images/st1.png" class="image fit"><img src="images/st1.png" alt="stroke prediction" /></a>
+
+<p>From the above output class bar chart, we can see that this dataset is highly imbalanced. Only 249 patients (4.87%) had stroke out of 5110 patients. 
+</p>
+
+
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+<h3>Data Cleaning</h3>
+<p>I have used pandas profiling to gain basic understanding of the data. Panda’s profiling report shows that only ‘bmi’ contains 201 missing entry. 
+ </p>
+ <a href="images/st2.png" class="image fit"><img src="images/st2.png" alt="stroke prediction" /></a>
+ <p>As we don’t have many observations, I decided to replace these missing bmi entries with its mean value, instead of dropping these rows completely.</p>
+ 
+<a href="images/st3.png" class="image fit"><img src="images/st3.png" alt="stroke prediction" /></a> 
+<a href="images/st4.png" class="image fit"><img src="images/st4.png" alt="stroke prediction" /></a> 
+
+<p>We can see that gender and residence_type doesn’t closely correlated with outcome variable. Whereas ‘age’, ‘glucose_level’ etc. have greater influence on stroke.</p>
+ 
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+
+<p>Boxplot to detect outliers</p>
+<a href="images/st5.png" class="image fit"><img src="images/st5.png" alt="stroke prediction" /></a> 
+
+<h3>Exploratory Data Analysis</h3>
+<p>Performed EDA to find out impact of each risk factor on stroke.</p>
+
+<a href="images/st7.png" class="image fit"><img src="images/st7.png" alt="stroke prediction" /></a> 
+<p>Age v/s Stroke distribution plot shows that chances of stroke increase after 55yrs of age and it is at maximum risk at 80yrs of age.</p>
+
+<a href="images/st8.png" class="image fit"><img src="images/st8.png" alt="stroke prediction" /></a> 
+<p>We can see if glucose level is below 100 or above 150, then chances of having stroke is more.</p>
+
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+
+<a href="images/st9.png" class="image fit"><img src="images/st9.png" alt="stroke prediction" /></a> 
+<p>Impact of bmi on stroke isn’t very clear. We can see 28-30 bmi has increased chances of stroke. 
+Some other influencing factors: </p>
+
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+
+<a href="images/st10.png" class="image fit"><img src="images/st10.png" alt="stroke prediction" /></a> 
+<a href="images/st11.png" class="image fit"><img src="images/st11.png" alt="stroke prediction" /></a> 
+<a href="images/st12.png" class="image fit"><img src="images/st12.png" alt="stroke prediction" /></a> 
+
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+
+<h3>Data Preparation</h3>
+<p>ARemoved outliers from glucose_level using z_score value. There are 4990 entries after removing outliers.
+	Dropped ‘id’ as this doesn’t have any impact on stroke outcome. Standardized the attributes values using RobustScaler() function. 
+	Divided training/test dataset into 75/25 ratio after preserving the minority/majority class balance using stratify option.
+	Most of the models don’t do very good with imbalanced dataset. To resolve this issue, I have used SMOTE() function to oversample the minority class. After oversampling, we have 3557 observation in each class of training dataset.
+
+</p>
+
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+
+<h3>Methodology</h3>
+<p>Our aim is to build a classification model that will predict stroke using risk factors. For this purpose, we are planning to use logistic regression classifier, Random Forest classifier and Artificial Neural Network. Logistic Regression classifier will establish the baseline training results and we will compare that with results from Random Forest & Artificial Neural Network.</p>
+
+ <h3>Results</h3>
+ <p>I have used sklearn’s GridSearchCV to fine tune the parameters for above model and then compared the results. We have used seeding for reproducibility. 
+I have plotted random forest results using CalibratedClassifierCV() function to know whether I have to perform any calibration or not. But based on the below plot, I have decided not to do any further calibration.
+</p>
+ <a href="images/st13.png" class="image fit"><img src="images/st13.png" alt="stroke prediction" /></a> 
+
+<h3>Best Model Selection</h3>
+  <a href="images/st14.png" class="image fit"><img src="images/st14.png" alt="stroke prediction" /></a>
+  <p>Based on the average precision score, I have selected the best parameters for Random Forest, Artificial Neural Network and Logistic Regression classifier. Also based on the average precision score, we have selected Random Forest as our best model.
+We have then tested Random Forest models using our test dataset and calculated accuracy and f1-score. f1-score is a harmonic mean of precision-recall. We have also produced confusion matrix for each test.
+</p> 
+
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+
+ <a href="images/st15.png" class="image fit"><img src="images/st15.png" alt="stroke prediction" /></a>
+  
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+<h3>Discussion</h3>
+ <p>Early detection of high risk patients group of possible stroke, can be predicted accurately by the use of machine learning techniques. This may result in the decrease of health cost and may provide ample time to patients to address their risk factors. In this project, the Random Forest has been determined to be more superior to Logistic Regression or ANN since it provided higher average precision score.</p>
+
+<p><a href="StrokePrediction.html" class="logo">back to top</a><p>
+
+
+ <h3>Conclusion</h3>
+ <ul class="alt">
+												<li>All the Models performed Pretty Well.</li>
+												<li>•	Accuracy result from Cross validation are close for all the models</li>
+												<li>R•	Selected Random Forest model based on the Cross-Validation accuracy score and it is easier to explain to all stakeholders.</li>
+												<li>•	Results from Test Dataset show that our decision to go with Random Forest is correct.</li>
+												<li>•	Trained Random Forest model on Entire Dataset using best Parameter.</li>
+
+											</ul>
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Omaha, NE </p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">saurabhbesu2007@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/saurabhbiswas1985" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<section>
+								<a href="index.html" class="logo">GoBack</a>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
