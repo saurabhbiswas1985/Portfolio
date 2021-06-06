@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Twitter Sentiment Analysis - US Airlines</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="generic.html">Twitter Sentiment Analysis - US Airlines</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3>Twitter Sentiment Analysis - US Airlines<br />
+									</h3>
+									<a href="images/twitter.png" class="image fit"><img src="images/twitter.png" alt="stroke" /></a>
+									<h5><a https://github.com/saurabhbiswas1985/saurabhbiswas1985.github.io/tree/main/Twitter%20Sentiment%20Analysis%20-%20US%20Airlines">View code on github<br />
+										</a></h5> <header>
+										<p> </p>
+<h3>Introduction</h3>
+<p>Social platforms like facebook, twitter etc. plays an important role in modern era. People share their opinion, views, happiness, anger, frustration over these social platforms. Analyzing the sentiment from these social platform data can provide an insight to the current trend, emerging issues etc.</p>
+
+<p>Analyzing the sentiment manually and tagging them as either positive, negative or neutral – is next to impossible. Machine Learning can help to address this problem. Data from social platforms can be gathered, processed and sentimental analysis can be done using Machine Learning. <p>
+									
+<p>Big businesses are putting lot of importance on sentimental analysis using Machine Learning now a days. They can find out how satisfied users are about a new product, are there any issues or pinpoint with customer care service etc. And then address those issues to improve customer satisfaction.</p>		
+
+<p>The aim of this project to carry out sentimental analysis of twitter data from February 2015 related travelers’ tweets about their recent travel in six major US airlines. This will reveal the major negative points that travelers are not happy about, most frequently used positive words on air travel experience, airlines that people are happy about etc.</p>			
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+<h3>Data Used</h3>
+<p>This project is using data from social networking domain. This dataset contains tweets from travelers on six major US airlines.   This dataset was scrapped from February 2015. Travelers were asked to classify their tweets and reason for their negative sentiment if any. It contains 14640 observations with 15 attributes.  </p>
+<p>•	tweet_id             
+•	airline_sentiment              
+•	airline_sentiment_confidence 
+•	negativereason  
+•	negativereason_confidence 
+•	airline 
+•	airline_sentiment_gold  
+•	name  
+•	negativereason_gold    
+•	retweet_count     
+•	text  
+•	tweet_coord 
+•	tweet_created 
+•	tweet_location  
+•	user_timezone   
+</p>
+
+											<ul class="alt">	
+												<li>Dataset: <a href="https://www.kaggle.com/crowdflower/twitter-airline-sentiment">Twitter Airline Data<br /></a></li>			
+
+											</ul>
+											
+<h3>Technology Used</h3>
+
+											<ul class="alt">
+												<li>Python3</li>
+												<li>Jupyter Notebook on Anaconda
+</li>
+											</ul>
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+<h3>Proposal</h3>
+<p>In modern era, social networking plays an important part in everybody’s life. People express their views -anger or happiness in social networking sites. Analyzing these social networking sites will provide us trending topics, current issues, good things going around the society that people are happy about. </p>
+
+<p>Analysing twitter data from air travellers can reveal several key information like:
+•	Are most of travelers happy about their recent experience? 
+•	What is the most trending US-airlines in twitter? 
+•	What airline has most negative tweets? 
+•	What airline has most positive tweets? 
+•	What is the most commonly used positive tweeted word? 
+•	What is the most frequently used negative word? 
+•	What are major categories of negative tweets? 
+ </p>
+ 
+<p>Machine Learning can help to carry out sentimental analysis of traveller’s twitter data. Other than providing the answers to above questions, it can also build a model that can determine whether a particular text is positive/negative/neutral in nature.  </p>
+
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+
+
+<h3>Data</h3>
+<p>I’m using twitter data scrapped from February 2015. This dataset contains tweets from travellers of six major US airlines. It contains 14640 observations with 15 attributes.  </p>
+
+<a href="images/tw1.png" class="image fit"><img src="images/tw1.png" alt="twitter analysis" /></a>
+
+<p>There is no metadata available for this dataset. Few attributes are straight forward like text, tweet_id, negativereason, airline, retweet_count etc.</p>
+
+<p>Few attributes like tweet_id, tweet_coord etc. irrelevant for my research as it is only used to uniquely identify the tweet. 
+</p>
+
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+<h3>Data Cleaning</h3>
+
+<p>Panda’s profiling report shows that negativereason, negativereason_confidence,  airline_sentiment_gold & negativereason_gold contains missing values. 
+ </p>
+ 
+ <a href="images/tw2.png" class="image fit"><img src="images/tw2.png" alt="twitter analysis" /></a>
+
+ <a href="images/tw3.png" class="image fit"><img src="images/tw3.png" alt="twitter analysis" /></a>
+
+ 
+ <p>I decided to replace these missing values with either blanks or with zeros depending upon the data types of those attributes.</p>
+ 
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+
+<h3>Exploratory Data Analysis</h3>
+<p>Performed EDA to find out the answers to key questions like
+•	Most tweeted airlines.
+•	Overall airline sentiment
+•	Sentiment at individual airlines level
+•	Most Negative reason counts.
+
+</p>
+
+ <a href="images/tw4.png" class="image fit"><img src="images/tw4.png" alt="twitter analysis" /></a>
+<p>Looks like most of the United airline was the most talked about airlines by travellers. Whereas Virgin America was the least discussed airlines. This can be because of good or bad reason. We will see that in subsequent analysis.</p>
+
+ <a href="images/tw5.png" class="image fit"><img src="images/tw5.png" alt="twitter analysis" /></a>
+<p>From the above plot, we can see that the overall traveller’s sentiment was negative. Let’s now see this breakdown at individual airline levels.</p>
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+ <a href="images/tw6.png" class="image fit"><img src="images/tw6.png" alt="twitter analysis" /></a>
+<p>From above plot, we can see lot of negativity among travellers regrading United Airlines. That’s why it was discussed most in tweets. Whereas for Virgin America, all counts are almost similar, though people tweeted least about this airline.</p>
+
+<p>The next question that comes into our mind what the most common reason are to cause bad travelling experience.</p>
+ <a href="images/tw7.png" class="image fit"><img src="images/tw7.png" alt="twitter analysis" /></a>
+<p>We can see that Customer Service Issue cause most dissatisfaction among travellers. So, airlines like United can take this feedback and try to improve their customer service.</p>
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+<p>While analysing the most negative reasons from text, we can see below words:</p>
+ <a href="images/tw8.png" class="image fit"><img src="images/tw8.png" alt="twitter analysis" /></a>
+<p>We can see some top words used in negative text tweets. United, USAirways, AmericalAirline are appeared most in the negative tweets. Whereas customer service, delayed bag, plane delay etc are the most negative reasons used in the tweets.</p>
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+ <a href="images/tw9.png" class="image fit"><img src="images/tw9.png" alt="twitter analysis" /></a>
+<p>JetBlue, SouthwestAir – appeared in most of the positive tweets. Travellers used word ‘thank’ in most of their positive tweets. </p>
+
+ <a href="images/tw10.png" class="image fit"><img src="images/tw10.png" alt="twitter analysis" /></a>
+<p></p>
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+
+<h3>Data Preparation</h3>
+<p>Converted values into airline_sentiment from 'neutral', 'positive', 'negative' to ‘0’, ‘1’ & ‘2’ for ease of analysis.
+
+</p>
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+<h3>Methodology</h3>
+<p>We have done two things in this project – 
+•	Analysed twitter text using SentimentIntensityAnalyzer and re-tag each text as positive, negative or neutral.
+•	Build a classification model to analyse the text and tag it either as positive, negative or neutral.
+</p>
+
+<p>We are planning to use logistic regression classifier, Random Forest classifier and Naïve Bayes. Logistic Regression classifier will establish the baseline training results and we will compare that with results from Random Forest & Naïve Bayes.</p>
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+ <h3>Results</h3>
+ <p>I have used SentimentIntensityAnalyzer to perform sentimental analysis of the text. It returned a compound score. If this score is greater than 0 then the text is positive. If it is less than zero, then the text is negative. Anything else falls under neutral category.
+</p>
+  <a href="images/tw10.png" class="image fit"><img src="images/tw10.png" alt="twitter analysis" /></a>
+  
+<p>My reclassification of text determines that there is more positive sentiment than negative. Also, it reveals that most of the tweets are either positive or negative. Very less people took neutral approach.</p>
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+
+<h3>Best Model Selection</h3>
+
+<p>Random Forest</p>
+  <a href="images/tw11.png" class="image fit"><img src="images/tw11.png" alt="twitter analysis" /></a>
+  
+ <p>Logistic Regression</p>
+    <a href="images/tw12.png" class="image fit"><img src="images/tw12.png" alt="twitter analysis" /></a>
+
+<p>Naive Bayes</p>
+      <a href="images/tw13.png" class="image fit"><img src="images/tw13.png" alt="twitter analysis" /></a>
+      
+  <p>Based on the accuracy score, I have selected Logistic Regression as our best model. We have then tested Random Forest models using our test dataset and calculated accuracy and f1-score. f1-score is a harmonic mean of precision-recall. 
+</p> 
+
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+ <h3>Discussion</h3>
+ <p>Airlines can use this sentimental analysis results to improve their service. Airlines those appeared most in negative tweet, can go back and discuss more on top negative reasons. This will provide them an opportunity to fix their problems.</p>
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+
+ <h3>Conclusion</h3>
+ <ul class="alt">
+												<li>All the Models performed Pretty Well.</li>
+												<li>	Results from Test Dataset show that our decision to go with Logistic Regression is correct.</li>
+												<li>Trained Random Forest model on Entire Dataset using best Parameter.</li>
+
+											</ul>
+<p><a href="Twitter.html" class="logo">back to top</a><p>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Omaha, NE </p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">saurabhbesu2007@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/saurabhbiswas1985" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<section>
+								<a href="index.html" class="logo">GoBack</a>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
