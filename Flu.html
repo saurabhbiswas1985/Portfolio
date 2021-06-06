@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Flu Mortality Impact Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="generic.html">Flu Mortality Impact Analysis<</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3>Flu Mortality Impact Analysis<br />
+									</h3>
+									<a href="images/flu.jpeg" class="image fit"><img src="images/flu.jpeg" alt="airlinesafety" /></a>
+									<h5><a href="https://github.com/saurabhbiswas1985/saurabhbiswas1985.github.io/tree/main/Flu%20Mortality%20Impact%20Analysis">View code on github<br />
+										</a></h5> <header>
+										<p> </p>
+<h3>Introduction</h3>
+<p>Each year lot of people dies because of influenza aka flu in United States of America. Few months of the year, the impact of flu is much more than the other months. This project will carry out a detail analysis based on data provided by CDC, data.gov, datausa.io, 50 sates.</p>
+
+
+
+<p><a href="Flu.html" class="logo">back to top</a><p>
+
+<h3>Data Used</h3>
+
+											<ul class="alt">	
+												<li>Dataset: <a href="https://github.com/saurabhbiswas1985/saurabhbiswas1985.github.io/tree/main/Flu%20Mortality%20Impact%20Analysis/Dataset">FLU Dataset<br /></a></li>		
+
+											</ul>
+											
+<h3>Technology Used</h3>
+
+											<ul class="alt">
+												<li>Python3</li>
+												<li>Anaconda
+</li>
+											</ul>
+<p><a href="Flu.html" class="logo">back to top</a><p>
+
+<h3>Proposal</h3>
+<p>This project will carry out a detail analysis based on data provided by CDC, data.gov, datausa.io, 50 sates. </p>
+
+
+
+
+
+<h3>Analysis</h3>
+<p>I gathered dataset from data.gov on flu. This dataset contains data from 1962-2016 for different cities. I selected data between 2005 to 2016 for my purpose. Then I cleaned the dataset and dropped all records having null data on flu death and all death. Further I had to get the data at month & state level from weekly city data. Then I removed all outliers using box plots.
+ </p>
+
+<p>I web scarped a website that provides short US state abbreviation and corresponding full name. Outcome of our milestone2 is a dataset that contains details on flu death, other deaths per state year wise. The state in this dataset is a two-position short abbreviation. I have used the dataset from web scraped data and merged it with previous one to get full state name in the combined dataset. 
+ </p>
+ 
+ <p>Also, I web-scarped CDC provided flu effectiveness dataset. I used timeseries technique to get the flu vaccine effectiveness at year level. I used these data in next steps to perform a comparison between flu death rate and flu vaccine effectiveness.
+ </p>
+ 
+ <p><a href="Flu.html" class="logo">back to top</a><p>
+ 
+ <p>I used API provided datausa.io to get the total population count for USA between 2013-2106 and population count at each state during the same window. </p>
+ 
+  <p>I merged these counts with original dataset and calculated flu death count per million for at state level and flu death count per ten million at country level. Also, I merged vaccine effectiveness dataset with country level data.
+ I loaded state level data and country level data into sqllite3 databases and then created visualization.
+I plotted bar plot for flu death rate year wise. From this I can see year 2013 has highest flu death count per 10 million people.
+From the scatter plot of year/month vs flu death rate, we can see 2015 Jan has highest flu death count per 10 million people.
+From flu death rate and vaccine effectiveness plot we can see, In 2013 vaccine effectiveness was highest, even though flu caused more death than other years. I didn't expect this behavior. Whereas in 2016, flu death rate dropped with increase in vaccine effectiveness than year 2014 and 2015. This is in line with my expectation. But due to this mixed behavior, we can't conclude what is the effect on vaccine effectiveness on flu death rate.
+
+From state wise scatter plot, we can see DC was most affected state by flu on 2013.
+</p>
+  
+<p><a href="Flu.html" class="logo">back to top</a><p>
+
+<a href="images/flu1.png" class="image fit"><img src="images/flu1.png" alt="Flu Mortality Analysis" /></a>
+
+<p><a href="Flu.html" class="logo">back to top</a><p>
+
+
+<p><a href="Flu.html" class="logo">back to top</a><p>
+
+<a href="images/flu2.png" class="image fit"><img src="images/flu2.png" alt="Flu Mortality Analysis" /></a>
+
+<p><a href="Flu.html" class="logo">back to top</a><p>
+
+
+<a href="images/flu3.png" class="image fit"><img src="images/flu3.png" alt="Flu Mortality Analysis" /></a>
+
+<p><a href="Flu.html" class="logo">back to top</a><p>
+<a href="images/flu4.png" class="image fit"><img src="images/flu4.png" alt="Flu Mortality Analysis" /></a>
+
+<p><a href="Flu.html" class="logo">back to top</a><p>
+
+<a href="images/flu5.png" class="image fit"><img src="images/flu5.png" alt="Flu Mortality Analysis" /></a>
+
+<p><a href="Flu.html" class="logo">back to top</a><p>
+
+ <h3>Things Learned</h3>
+<p>
+•	How to split a data frame column into multiple column and then extract the information of interest.
+•	Cleaning and dropping null values.
+•	Removing outliers using box plot.
+•	Grouping data based on few columns based on my need.
+•	web scraping and clean that with beautifulsoup.
+•	Figuring out how we can merge different datasets to get a combined view.
+•	API call and parsing a JSON and load that into a data frame.
+•	Loop through data frame rows
+•	creating new views at different aspects from the data frame.  
+•	Loading data frame into a database.
+•	plotting and adjust the font size, orientation etc.
+
+</p>
+
+											</ul>
+<p><a href="AirSafety.html" class="logo">back to top</a><p>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Omaha, NE </p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">saurabhbesu2007@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/saurabhbiswas1985" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<section>
+								<a href="index.html" class="logo">GoBack</a>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
