@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>About Me</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="generic.html">Credit Card Fraud Detection</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3>Credit Card Fraud Detection using Machine Learning<br />
+									</h3>
+									<a href="images/creditcardfraud.jpeg" class="image fit"><img src="images/creditcardfraud.jpeg" alt="credit card fraud" /></a>
+									<h5><a href="https://github.com/saurabhbiswas1985/saurabhbiswas1985.github.io/tree/main/Credit%20Card%20Fraud%20Detection%20Using%20Machine%20Leraning">View code on github<br />
+										</a></h5> <header>
+										<p> </p>
+<h3>Introduction</h3>
+<p>Credit Card fraud i.e. unauthorized access of someone’s credit card, is one of biggest problem that financial industries are facing since introduction of card-based payments. Credit Card fraud is one of the biggest sources of revenue loss for payment card industry. In 2018, $24.26 Billion was lost due to payment card fraud worldwide. The United States leads as the most credit fraud prone country with 38.6% of reported card fraud losses in 2018.</p>
+
+<p>Financial institutions use <b>traditional fraud detection system</b>. Some issues with traditional fraud detection system:<p>
+											<ul class="alt">
+												<li>Requires domain expertise to build and maintain the system.</li>
+												<li>High operating cost for maintenance.</li>
+												<li>Greater Time to market to combat new fraud trends.</li>
+											</ul>
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+<h3>Data Used</h3>
+
+											<ul class="alt">
+												<li>Dataset: <a href="https://www.kaggle.com/isaikumar/creditcardfraud">Credit CardFraud Dataset<br /></a></li>
+												<li>Highly <b>imbalanced</b> Dataset. Out of 284807 total transactions only 492 transactions are fraudulent i.e. it represents only 0.17% of the entire dataset.</li>
+												<li>To maintain the data confidentiality, most of the variables (V1 through V28) were PCA transformed.
+</li>
+											</ul>
+											
+<h3>Technology Used</h3>
+
+											<ul class="alt">
+												<li>Python3</li>
+												<li>Jupyter Notebook on Anaconda
+</li>
+											</ul>
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+<h3>Proposal</h3>
+<p>The aim of this project is to use machine learning techniques to combat fraud. Machine learning offers various classification models. This project will use Random Forest, Logistic Regression and Artificial Neural Network to build models. These models will be trained offline using the historical data. These trained models will be cross validated, and results will be compared to select the best model. It will be tested against an unseen test data. Once satisfied test result is obtained, it will be trained against the entire dataset and the prototype will be ready for use.</p>
+
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+
+<h3>Process Overview</h3>
+<p>Historical credit card transaction data from Kaggle will be used for this project. Basic analysis will be done on this data to understand the basic structure. Then the dataset will be split into train and test dataset in 75%/25% ratio. After that Exploratory Data Analysis will be performed to understand the underlaying relationship between different variables. Then outliers will be removed. Pipeline will be created with data transformation logic. The model parameters will be tuned with the help of cross validation. Models’ performance will be evaluated and compared. Pipeline will be set up for best model and will be trained on the entire dataset. </p>
+
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+<h3>Data</h3>
+<p>creditcard.csv is used from Kaggle. It contains two days credit card transactions from 2013 September from Europe. It contains 284,807 transactions. To maintain the data confidentiality, most of the variables were PCA transformed. Only ‘Amount’ and ‘Time’ variables are in their original form. Variables V1 through V28 contain only numeric values as a result of PCA transformation. ‘Class’ variable contains the outcome of the transactions – 1 signifies fraudulent and 0 – signifies non-fraudulent transactions. </p>
+
+<a href="images/creditcardfraud.jpeg" class="image fit"><img src="images/crd1.png" alt="credit card fraud" /></a>
+
+<p>It shows the dataset is highly imbalanced. Out of 284807 total transactions only 492 transactions are fraudulent i.e. it represents only 0.17% of the entire dataset.
+To understand how amount is distributed for each Class, the amount distribution is plotted for fraud and non-fraud class.
+</p>
+
+<a href="images/creditcardfraud.jpeg" class="image fit"><img src="images/crd2.png" alt="credit card fraud" /></a>
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+<h3>Exploratory Data Analysis and Data Cleaning</h3>
+<p>Exploratory Data Analysis is one of the most important steps in data science methodology. It reveals important relationship between variables that is not visible from outside. It also identifies the most important variables on the dataset that have most impact on the output class. 
+Exploratory Data Analysis is done on training dataset to reveal important. pandas_profiling ProfileReport is used to get distribution of all variables as well as to get the univariate correlation between all variables.
+ </p>
+ <a href="images/creditcardfraud.jpeg" class="image fit"><img src="images/crd3.png" alt="credit card fraud" /></a>
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+<p>Above Pearson and spearman plot shows the univariate linear and non-linear correlation between each variable with other variables. It also shows that none of the two variables are highly correlated. 
+Pearson correlation is calculated between all independent variables with output ‘Class’ variable to identify important variables.
+</p>
+
+ <a href="images/creditcardfraud.jpeg" class="image fit"><img src="images/crd4.png" alt="credit card fraud" /></a>
+<p><a href="Creditcard.html" class="logo">back to top</a><p> 
+ <p>Boxplot to determine outliers
+</p>
+
+ <a href="images/creditcardfraud.jpeg" class="image fit"><img src="images/crd5.png" alt="credit card fraud" /></a>
+<p>Amount, V14, V12, V10, V2 & V21 have outliers. And these outliers need to be removed prior to model training. Outliers need to be removed from both fraud and non-fraud Class separately. zscore is used to detect outliers. To remove outliers first the training dataset is split based on fraud and non-fraud class. zscore is calculated for each of these variables and all observations with zscore >= 3 is removed. Once the outliers are removed both classes are merged into one training dataset. As a result of this outlier removal process, it removed 27 fraudulent transactions and 18534 non-fraudulent transactions from training dataset.
+Because of PCA transformation, there is no null values in any of the variables. Also, V1 through V28 variables are scaled because these are PCA transformed.
+</p>
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+<h3>Pipeline Setup</h3>
+<p>ColumnTransformer is used to transform the columns. RobustScaler is used for scaling the ‘Amount’ and ‘Time’ columns. All remaining columns are passthrough, no transformation will occur for those columns. Pipeline will have transformation built into it so that it can transform test dataset before feeding into model.</p>
+ <h3>Model and Parameter Tuing</h3>
+ <p>GridSearchCV is used to fine tune the parameter. It returns the best fit parameter depending upon average precision score.</p>
+  <a href="images/creditcardfraud.jpeg" class="image fit"><img src="images/crd7.png" alt="credit card fraud" /></a>
+<h3>Best Model Selection</h3>
+ <p>Random Forest model is not calibrated. It returns a vote rather than a probability score. The calibration_curve shows that the random forest model requires further calibration.</p>
+ <p>Logistic Regression is selected based on the average precision score. This is less complex than artificial neural network model.</p>
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+<h3>Model Evaluation</h3>
+ <p>Logistic Regression model is tested against the test dataset and an average precision score of 0.66 is obtained.</p>
+  <a href="images/creditcardfraud.jpeg" class="image fit"><img src="images/crd6.png" alt="credit card fraud" /></a>
+  <p>Higher area under the average precision recall curve signifies, our selected model performed good on test dataset.</p>
+  <a href="images/creditcardfraud.jpeg" class="image fit"><img src="images/crd8.png" alt="credit card fraud" /></a>
+ <h3>Conclusion</h3>
+ <ul class="alt">
+												<li>All the Models performed Pretty Well.</li>
+												<li>Average Precision Scores are Similar.</li>
+												<li>Random Forest can be Improved with Calibration.</li>
+												<li>Selected Logistic Regression model based on the Cross-Validation Score and simplicity of this model.</li>
+												<li>Trained Logistic Regression model on Entire Dataset using best Parameter Pipeline.</li>
+
+											</ul>
+<p><a href="Creditcard.html" class="logo">back to top</a><p>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Omaha, NE </p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">saurabhbesu2007@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/saurabhbiswas1985" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<section>
+								<a href="index.html" class="logo">GoBack</a>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
