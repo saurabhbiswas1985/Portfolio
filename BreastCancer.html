@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>About Me</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="generic.html">Breast Cancer Prediction by Machine Learning</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3>Breast Cancer Prediction by Machine Learning<br />
+									</h3>
+									<a href="images/breastcancer.jpeg" class="image fit"><img src="images/breastcancer.jpeg" alt="breast cancer prediction" /></a>
+									<h5><a href="https://github.com/saurabhbiswas1985/saurabhbiswas1985.github.io/tree/main/Breast%20Cancer%20Prediction">View code on github<br />
+										</a></h5> <header>
+										<p> </p>
+<h3>Introduction</h3>
+<p>Breast Cancer is the 2nd most common cancer in women. But, on rare scenario can also happen to men. It is 2nd leading cause of deaths of women after lung cancer. A fine needle biopsy is an effective tool in evaluating and diagnosing suspect lumps or masses. With early diagnosis of breast cancer, patients can be isolated for early treatment for a better chance of survival. Early detection of disease has become a crucial problem due to rapid population growth in medical research in recent times.</p>
+
+<p>My aim is to develop a <b>classification model</b> that will identify breast cancer using the FNA diagnosis label with <b>higher accuracy</b>. This model will be great for <b>predicting cancer in advance</b>, because classification algorithms make boundaries between data points classifying them as a certain group, depending on their characteristics matched against the model’s parameters.<p>
+											
+<p><a href="BreastCancer.html" class="logo">back to top</a><p>
+<h3>Data Used</h3>
+
+											<ul class="alt">
+												<li>Dataset: <a href="http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">UCI Irvine machine learning repository <br /></a><a href="https://www.kaggle.com/uciml/breast-cancer-wisconsin-data">Breast Cancer <br /></a></li>
+												<li><b>30 input features</b>. The mean, standard error and "worst" or largest (mean of the three largest values) of main features like radius, texture, Perimeter etc. features were computed for each image, resulting in 30 features.</li>
+												<li>Dataset is not much imbalanced. Out of total 569 sample, 357 of data samples labelled as B (benign - no cancer) and 212 of data samples labelled as M (malignant - cancer).
+</li>
+											</ul>
+											
+<h3>Technology Used</h3>
+
+											<ul class="alt">
+												<li>Python3</li>
+												<li>Jupyter Notebook on Anaconda
+</li>
+											</ul>
+<p><a href="BreastCancer.html" class="logo">back to top</a><p>
+<h3>Proposal</h3>
+<p>Breast Cancer is the 2nd most common cancer in women. But, on rare scenario can also happen to men. It is 2nd leading cause of deaths of women after lung cancer. A fine needle biopsy is an effective tool in evaluating and diagnosing suspect lumps or masses. With early diagnosis of breast cancer, patients can be isolated for early treatment for a better chance of survival. Common biopsies for breast cancer diagnosis includes fine-needle aspiration (FNA), core needle biopsy, and MRI-guided biopsy.  In this analysis, we will be using ten features of tumour cell nuclei extracted from the digital image processing of an FNA of a breast mass to predict breast cancer. The data is collected from UCI Machine learning repository.</p>
+
+<p><a href="BreastCancer.html" class="logo">back to top</a><p>
+
+<h3>Process Overview</h3>
+<ul class="alt">
+	<li>Pandas Profiling for initial Data Exploration.</li>
+	<li>Target variable values have translated from B (benign) to 0 and M (malignant) to 1. Target variable ‘0’ will be treated as no cancer and ‘1’ will be treated as breast cancer.</li>
+	<li>Drop correlated features after keeping one from each category.</li>
+	<li>Boxplot to detect outlier.</li>
+	<li>Z-score calculation to remove outlier.</li>
+	<li>Accuracy and F1-score are used for matrix evaluation.</li>
+	<li>Set up pipeline</li>
+	<li>GridSearchCV is used to tune Random Forest and Logistic Regression Classifier parameters and select the best one.</li>
+	<li>Best model's performance test and evaluation.</li>
+											</ul>
+
+<p><a href="BreastCancer.html" class="logo">back to top</a><p>
+<h3>Data</h3>
+<p>The benchmark dataset in this research will obtained from the UCI Irvine machine learning repository http://archive.ics.uci.edu/ml/index.html. This dataset was originally created by Dr. Wolberg, Street and Mangasarian all from University of Wisconsin. Data items in the dataset are composed of ID number, the diagnosis which will either be classified as malignant (M) or benign(B) and numeric shape features of extract cellular nuclei such as radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, and symmetry and fractal dimension. Each of the dataset in the observation is composed of 30 variables and 10 of the featured variables are related to the aforementioned characteristics. As described in the website, following main features were computed for each cell nucleus and will be used as input for our analysis. All feature values are recoded with four significant digits. </p>
+<p>The mean, standard error and "worst" or largest (mean of the three largest values) of these features were computed for each image, resulting in 30 features. For instance, field 3 is Mean Radius, field 13 is Radius SE, and field 23 is Worst Radius. There are no missing values in the dataset. ‘diagnosis’ is the target variable. The total numbers of data samples with different labels are not balanced. In fact, the total number (357) of data samples labelled as B (benign) is almost doubled the total number (212) of data samples labelled as M (malignant).</p>
+
+<a href="images/BreastCancer.jpeg" class="image fit"><img src="images/bc1.svg" alt="breast cancer detection" /></a>
+
+<p>For the purpose of running machine learning algorithm, the target variable values have translated from B (benign) to 0 and M (malignant) to 1. Target variable ‘0’ will be treated as no cancer and ‘1’ will be treated as breast cancer. We have dropped ‘Id’ column as it won’t provide any value in determining breast cancer outcome.
+</p>
+
+<a href="images/BreastCancer.jpeg" class="image fit"><img src="images/bc2.png" alt="breast cancer detection" /></a>
+<p><a href="BreastCancer.html" class="logo">back to top</a><p>
+
+<p>Based on the above heatmap and correlation table value - radius_mean, perimeter_mean & area_mean have higher correlation, radius_worst, perimeter_worst & area_worst have higher correlation (>0.98). So, we have kept perimeter_mean & perimeter_worst and dropped other correlated columns for further analysis. </p>
+
+<h3>BoxPlot</h3>
+<a href="images/BreastCancer.jpeg" class="image fit"><img src="images/bc3.svg" alt="breast cancer detection" /></a>
+<p><a href="BreastCancer.html" class="logo">back to top</a><p>
+
+<h3>Methodology</h3>
+<p>Our aim is to build a classification model that will identify breast cancer using diagnosis label. For this purpose, we are planning to use logistic regression classifier, Random Forest classifier. Logistic Regression classifier will establish the baseline training results and we will compare that with results from Random Forest.
+ </p>
+ <p><a href="BreastCancer.html" class="logo">back to top</a><p>
+ <h3>Results</h3>
+<p>We used sklearn’s GridSearchCV to fine tune the parameters for above model and then compared the results. We have created Pipelines for Random Forest and Logistic Regression model with different parameters. Then we passed different values through these pipeline parameters to GridSearchCV for module tuning. We have used seeding for reproducibility.
+</p>
+
+<a href="images/BreastCancer.jpeg" class="image fit"><img src="images/bc4.png" alt="breast cancer detection" /></a>
+<p><a href="BreastCancer.html" class="logo">back to top</a><p>
+
+<p>Random Forest classifier are not best suited for skewed class distribution. Our dataset is imbalanced dataset. But it is not heavily imbalanced (cancer: no-cancer as 1:2). So, we decided that we don’t need calibration.</p>
+<p>Based on the accuracy we selected the best parameters for Random Forest and Logistic Regression classifier. Also based on the accuracy, we have selected Random Forest as our best model.</p>
+<p>We have then tested both of these models using our test dataset and calculated accuracy and f1-score. f1-score is a harmonic mean of precision-recall. We have also produced confusion matrix for each test.</p>
+
+<p><a href="BreastCancer.html" class="logo">back to top</a><p>
+
+<h3>Model Evaluation</h3>
+<a href="images/BreastCancer.jpeg" class="image fit"><img src="images/bc5.png" alt="breast cancer detection" /></a>
+
+ <h3>Discussion</h3>
+<p>Early detection of breast cancer cells can be predicted accurately by the use of machine learning techniques. This may result in the decrease of health cost and may enhance time required for a patient to receive treatment. In this project the linear regression and the Random Forest have been discussed in providing diagnostic and prognosis assessment for breast cancer. The Random Forest has been determined to be more superior to Logistic Regression since it provided higher prediction accuracy.
+</p>
+
+ <h3>Conclusion</h3>
+ <ul class="alt">
+												<li>	All the Models performed Pretty Well.</li>
+												<li>	Accuracy result from Cross validation are close for both the models</li>
+												<li>	Selected Random Forest model based on the Cross-Validation accuracy score and it is easier to explain to all stakeholders.</li>
+												<li>	Results from Test Dataset show that our decision to go with Random Forest is correct.</li>
+												<li>Trained Random Forest model on Entire Dataset using best Parameter Pipeline.</li>
+
+											</ul>
+<p><a href="BreastCancer.html" class="logo">back to top</a><p>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Omaha, NE </p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">saurabhbesu2007@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/saurabhbiswas1985" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<section>
+								<a href="index.html" class="logo">GoBack</a>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
